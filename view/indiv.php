@@ -46,7 +46,7 @@
             //DB Info
             $dbHost = "127.0.0.1";
             $dbUser = "root";
-            $dbPass = "";
+            $dbPass = "password!";
             $db = "ReportDB";
             $table = "reports";
 

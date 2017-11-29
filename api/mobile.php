@@ -60,7 +60,7 @@
             //DB Vars
                 $dbHost = "127.0.0.1";
                 $dbUser = "root";
-                $dbPass = "";
+                $dbPass = "password!";
                 $db = "ReportDB";
                 $table = "reports";
                 $sql = "INSERT INTO $table (id, reprt, plateID, plateState, incDate, usrName, perpName, usrMail, perpMail, incLat, incLon) VALUES ('$id', '$reprt', '$plateID', '$plateState', '$incDate', '$usrName', '$perpName', '$usrMail', '$perpMail', '$incLat', '$incLon');";
