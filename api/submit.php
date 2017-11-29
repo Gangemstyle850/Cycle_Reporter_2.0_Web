@@ -82,7 +82,7 @@
                 $dbHost = "127.0.0.1";
                 $dbUser = "root";
                 $dbPass = "password!";
-                $db = "ReportDB";
+                $db = "reportdb";
                 $table = "reports";
                 $sql = "INSERT INTO $table (id, reprt, plateID, plateState, incDate, usrName, perpName, usrMail, perpMail, incLat, incLon) VALUES ('$id', '$reprt', '$plateID', '$plateState', '$incDate', '$usrName', '$perpName', '$usrMail', '$perpMail', '$incLat', '$incLon');";
 
