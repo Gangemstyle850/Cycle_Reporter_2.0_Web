@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <!--Global Style Sheet Imports-->
+        <link rel="stylesheet" type="text/css" href="../style/global.css"/>
+
+        
+        
+        <!--GMaps Lat-Lon Picker Imports-->
+        <script src="../resources/lat-long-picker/js/jquery-2.1.1.min.js"></script>
+        <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+        <link rel="stylesheet" type="text/css" href="../resources/lat-long-picker/css/jquery-gmaps-latlon-picker.css"/>
+        <script src="../resources/lat-long-picker/js/jquery-gmaps-latlon-picker.js"></script>
+        
+        <title>Submit Report - Cycle Reporter</title>
+
+        <!--Some Little Added Touches For Mobile, And Those Who Care-->
+        <link rel="shortcut icon" href="../../favicon.ico">
+        <meta name="theme-color" content="#191919" />
+    </head>
+    
+    <body>
+        <!--Remaining Char. Counter Script-->
+        <script>
+            function textCounter(field,field2,maxlimit){
+                var countfield = document.getElementById(field2);
+                    if ( field.value.length > maxlimit ) {
+                        field.value = field.value.substring( 0, maxlimit );
+                        return false;
+                    } else {
+                        countfield.value = maxlimit - field.value.length;
+                    }
+            }
+        </script>
+
+
+        <!--Top Nav Bar-->
+        <header><a href="../../index.html" class="button">Home</a><a href="../contact/index.html" class="button1">Contact Us</a></header>
+        
+        
+        <!--Begin Input Form-->
+        <form action="backend/submit.php" method="POST" enctype="multipart/form-data">
+            
+            <p>
+                Description Of Incident (500 Characters):<br>
+                <textarea name="Reprt" cols="50" rows="7" maxlength="500" required="true" onkeyup="textCounter(this,'counter0',500);"></textarea><br>
+                Remaining Characters: <input disabled maxlength="3" size="1" value="500" id="counter0">
+            </p><br>
+
+            <p>
+                Location Of Incident:<br>
+                    <fieldset class="gllpLatlonPicker">
+                        <input type="text" class="gllpSearchField">
+                        <input type="button" class="gllpSearchButton" value="Search For Location"><br><br>
+	                    <div class="gllpMap">Google Maps</div>
+	                    <input type="hidden" class="gllpLatitude" name="incLat" value="34.2979"/>
+	                    <input type="hidden" class="gllpLongitude" name="incLon" value="83.8241"/>
+	                    <input type="hidden" class="gllpZoom" value="3"/>
+                    </fieldset>
+            </p><br>
+
+            <p>
+                License Plate:<br>
+                <textarea name="plateID" maxlength="8" rows="1" cols="8" required="true" onkeyup="textCounter(this,'counter1',8);"></textarea>
+
+                <select name="plateState" required="true">
+	                <option value="AL">Alabama</option>
+	                <option value="AK">Alaska</option>
+	                <option value="AZ">Arizona</option>
+	                <option value="AR">Arkansas</option>
+	                <option value="CA">California</option>
+	                <option value="CO">Colorado</option>
+	                <option value="CT">Connecticut</option>
+	                <option value="DE">Delaware</option>
+	                <option value="DC">District of Columbia</option>
+	                <option value="FL">Florida</option>
+	                <option value="GA" selected="true">Georgia</option>
+	                <option value="HI">Hawaii</option>
+	                <option value="ID">Idaho</option>
+	                <option value="IL">Illinois</option>
+	                <option value="IN">Indiana</option>
+	                <option value="IA">Iowa</option>
+	                <option value="KS">Kansas</option>
+	                <option value="KY">Kentucky</option>
+	                <option value="LA">Louisiana</option>
+	                <option value="ME">Maine</option>
+	                <option value="MD">Maryland</option>
+	                <option value="MA">Massachusetts</option>
+	                <option value="MI">Michigan</option>
+	                <option value="MN">Minnesota</option>
+	                <option value="MS">Mississippi</option>
+	                <option value="MO">Missouri</option>
+	                <option value="MT">Montana</option>
+	                <option value="NE">Nebraska</option>
+	                <option value="NV">Nevada</option>
+	                <option value="NH">New Hampshire</option>
+	                <option value="NJ">New Jersey</option>
+	                <option value="NM">New Mexico</option>
+	                <option value="NY">New York</option>
+	                <option value="NC">North Carolina</option>
+	                <option value="ND">North Dakota</option>
+	                <option value="OH">Ohio</option>
+	                <option value="OK">Oklahoma</option>
+	                <option value="OR">Oregon</option>
+	                <option value="PA">Pennsylvania</option>
+	                <option value="RI">Rhode Island</option>
+	                <option value="SC">South Carolina</option>
+	                <option value="SD">South Dakota</option>
+	                <option value="TN">Tennessee</option>
+	                <option value="TX">Texas</option>
+	                <option value="UT">Utah</option>
+	                <option value="VT">Vermont</option>
+	                <option value="VA">Virginia</option>
+	                <option value="WA">Washington</option>
+	                <option value="WV">West Virginia</option>
+	                <option value="WI">Wisconsin</option>
+	                <option value="WY">Wyoming</option>
+                </select><br>
+
+                <input disabled maxlength="1" size="1" value="8" id="counter1">
+
+            </p><br>
+
+
+
+            <p>
+                Date Of Incident:<br>
+
+                Day: <select name="incDay" required="true">
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+
+                Month: <select name="incMonth" required="true">
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option> 
+                </select>
+
+                Year: <select name="incYear" required="true">
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                </select>
+            </p><br>
+
+
+
+            <p>File Attachments (Video Files):<br>
+                <input type="file" accept="video/*" name="vidUp" id="vidUp">
+            </p><br>
+
+            
+
+            <p>
+                Perp(s') Name:<br>
+                <input type="text" name="perpName"><br>
+            </p>
+
+
+
+            <p>
+                Perp(s') Mail:<br>
+                <input type="text" name="perpMail"><br>
+            </p>
+
+
+
+            <p>
+                Contact Name:<br>
+                <input type="text" name="usrName" required="true"><br>
+            </p>
+            
+
+
+            <p>
+                Email:<br>
+                <input type="email" name="usrMail" required="true"> --- For Contact Purposes Only, We Promise Not To Give Out Your Info, And We Will Never Send You Spam.
+            </p><br>
+
+
+            <!--Comment Following Section Out To Disable User Selectable Dev Options For The Sumbition Scipt-->
+            <!--<p>
+                ------Dev Options------<br>
+                Debug Output:<br>
+                <select name="debug" required="true">
+                    <option value="true" selected="true">Enabled</option>
+                    <option value="false">Disabled</option>
+                </select><br>
+                
+                Send Data:<br>
+                <select name="dbSend" required="true">
+                    <option value="true" selected="true">Enabled</option>
+                    <option value="false">Disabled</option>
+                </select>
+            </p><br>-->
+
+            <input type="submit" name="submit" value="Submit Incident Report">
+
+        </form>
+    </body>
+</html>
