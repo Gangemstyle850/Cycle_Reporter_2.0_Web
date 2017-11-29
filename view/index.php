@@ -37,7 +37,7 @@
                     $dbHost = "127.0.0.1";
                     $dbUser = "root";
                     $dbPass = "password!";
-                    $db = "ReportDB";
+                    $db = "reportdb";
                     $table = "reports";
 
                     //SQL Query To Run
@@ -51,7 +51,7 @@
 
                     //Select Database On Server
                     $SelectedDB = mysqli_select_db($con, $db)
-                        or die("Could Not Find And Select Database On Server :'( Please Wait And Try Again, {Placids, Are Going, There, }Or Contact The Site Administrator (Info On Contact Page) If The Problem Persists, And Please Include, ERROR CODE: 2<br>");
+                        or die("Could Not Find And Select Database On Server :'( Please Wait And Try Again, Or Contact The Site Administrator (Info On Contact Page) If The Problem Persists, And Please Include, ERROR CODE: 2<br>");
 
                     //Pull Data Via SQL Query
                     $result = mysqli_query($con,$sql)or die("SQL Error Message: " . mysql_error() . "<br>");
