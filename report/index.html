@@ -2,20 +2,20 @@
 <html>
     <head>
         <!--Global Style Sheet Imports-->
-        <link rel="stylesheet" type="text/css" href="../style/global.css"/>
+        <link rel="stylesheet" type="text/css" href="/resources/style/global.css"/>
 
         
         
         <!--GMaps Lat-Lon Picker Imports-->
-        <script src="../resources/lat-long-picker/js/jquery-2.1.1.min.js"></script>
+        <script src="/resources/lat-long-picker/js/jquery-2.1.1.min.js"></script>
         <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-        <link rel="stylesheet" type="text/css" href="../resources/lat-long-picker/css/jquery-gmaps-latlon-picker.css"/>
-        <script src="../resources/lat-long-picker/js/jquery-gmaps-latlon-picker.js"></script>
+        <link rel="stylesheet" type="text/css" href="/resources/lat-long-picker/css/jquery-gmaps-latlon-picker.css"/>
+        <script src="/resources/lat-long-picker/js/jquery-gmaps-latlon-picker.js"></script>
         
         <title>Submit Report - Cycle Reporter</title>
 
         <!--Some Little Added Touches For Mobile, And Those Who Care-->
-        <link rel="shortcut icon" href="../../favicon.ico">
+        <link rel="shortcut icon" href="/favicon.ico">
         <meta name="theme-color" content="#191919" />
     </head>
     
@@ -35,11 +35,11 @@
 
 
         <!--Top Nav Bar-->
-        <header><a href="../../index.html" class="button">Home</a><a href="../contact/index.html" class="button1">Contact Us</a></header>
+        <header><a href="/index.html" class="button">Home</a><a href="/contact/index.html" class="button1">Contact Us</a></header>
         
         
         <!--Begin Input Form-->
-        <form action="backend/submit.php" method="POST" enctype="multipart/form-data">
+        <form action="/api/submit.php" method="POST" enctype="multipart/form-data">
             
             <p>
                 Description Of Incident (500 Characters):<br>
