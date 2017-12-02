@@ -193,7 +193,7 @@ center{
 }
 
 /* Links inside the dropdown */
-.dropdown-content a {
+.dropContent {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
