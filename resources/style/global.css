@@ -71,10 +71,6 @@
 
 
 
-body{
-    background-color: #191919;
-}
-
 p{
     color: #029999;
 }
@@ -95,9 +91,11 @@ html{
 	height: 100%;
 }
 body{
+	background-color: #191919;
     min-height:100%; 
     position:relative; 
     padding-bottom:[footer-height] 
+	font-family: Verdana,sans-serif;
 }
 
 center{
