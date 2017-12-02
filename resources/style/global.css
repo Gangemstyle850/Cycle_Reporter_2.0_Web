@@ -108,7 +108,7 @@ center{
     height: [footer-height];
 	background-color: #333;
 	width: 100%;
-	padding: 1%;
+	max-height: 13.5%;
 }
 
 
