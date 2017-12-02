@@ -159,7 +159,7 @@ center{
     background-color: orangered;
     color: white;
 }
-
+  
 #viewTBL th {
     border: 1px solid #666;
     padding: 8px;;
@@ -174,12 +174,12 @@ center{
 
 /* Style The Dropdown Button */
 .dropbtn {
-	background: url(/resources/drawable/menuIcon.png);
+    background: url(/resources/drawable/menuIcon.png);
     padding: 16px;
     border: none;
     cursor: pointer;
-	width: 6%
-	height: 2%
+    width: 6%;
+    height: 2%;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -207,7 +207,9 @@ center{
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
