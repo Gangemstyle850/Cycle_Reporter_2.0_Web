@@ -99,6 +99,11 @@ body{
     position:relative; 
     padding-bottom:[footer-height] 
 }
+
+center{
+	color:#029999;
+}
+
 .footer{ 
     position: absolute; 
     left: 0 ; right: 0; bottom: 0; 
