@@ -31,13 +31,6 @@
     background-color: #ddd;
 }
 
-footer {
-	background-color: #333;
-	width: 100%;
-	bottom: 0;
-	position: relative;
-}
-
 
 
 
@@ -96,6 +89,20 @@ h2{
 
 textarea{
     resize:none;
+}
+
+html{ 
+	height: 100%;
+}
+body{
+    min-height:100%; 
+    position:relative; 
+    padding-bottom:[footer-height] 
+}
+.footer{ 
+    position: absolute; 
+    left: 0 ; right: 0; bottom: 0; 
+    height:[footer-height] 
 }
 
 
