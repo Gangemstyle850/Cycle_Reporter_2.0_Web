@@ -1,0 +1,10 @@
+SCRIPTS{
+GitHub Auto Deployment Script: https://gist.github.com/oodavid/1809044
+
+}
+
+
+IMAGES{
+Menu Icon: https://commons.wikimedia.org/wiki/File:OOjs_UI_icon_menu.svg
+
+}
