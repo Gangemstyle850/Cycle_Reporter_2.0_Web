@@ -33,7 +33,7 @@
 				</div>
 			</div>
 		</header>
-		
+		<h1>All Reports:</h1>
         <!--
         <h1>
             Search: 
@@ -107,10 +107,11 @@
 		<footer class="footer">
 			<center>
 				<p>
-					&#9400; Carter Bailey 2017
+					<small>&#9400; Carter Bailey 2017</small>
 				</p>
 				<p>					
-					<script type='text/javascript' style="max-height: 69px;" id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=0e1633&w=100&t=tt&d=Bm9rtsuwwVA4KLUkpBLYAkix6kSG5HmrEv_t_SogiZc&co=0b4975&cmo=3acc3a&cmn=ff5353&ct=cdd4d9'></script>
+					<!--<script type='text/javascript' style="max-height: 69px;" id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=0e1633&w=100&t=tt&d=Bm9rtsuwwVA4KLUkpBLYAkix6kSG5HmrEv_t_SogiZc&co=0b4975&cmo=3acc3a&cmn=ff5353&ct=cdd4d9'></script>
+					-->
 				</p>
 			</center>
 		</footer>
