@@ -66,53 +66,52 @@
 			
             
             //UPLOAD THE FILEZ!!!
-				toString()
 				$target_dir = "/reports/{$id}/files/";
-	
-				if (!mkdir($target_dir, 0777, true)) {
-    				die('Sorry, We Couldent Create A Folder For Your Files.');
+				
+				if(!mkdir($target_dir, 0777, true)){
+					die('Sorry, We Couldent Create A Folder For Your Files.');
 				}
 			
 				$target_file = $target_dir . basename($_FILES["vidUp"]["name"]);
 				$uploadOk = 1;
 				$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 				// Check if image file is a actual image or fake image
-				if(isset($_POST["submit"])) {
-    				$check = getimagesize($_FILES["vidUp"]["tmp_name"]);
-    				if($check !== false) {
-        				echo "File Is Of Valid Type - " . $check["mime"] . ".";
-        				$uploadOk = 1;
-    				} else {
-        				echo "Sorry, Only MP4, MOV, WMV, FLV & AVI Files Are Allowed.";
-        				$uploadOk = 0;
-    				}
+				if(isset($_POST["submit"])){
+                    $check=getimagesize($_FILES["vidUp"]["tmp_name"]);
+                    if($check !== false){
+						echo "File Is Of Valid Type - " . $check["mime"] . ".";
+						$uploadOk = 1;
+					}else{
+						echo "Sorry, Only MP4, MOV, WMV, FLV & AVI Files Are Allowed.";
+						$uploadOk = 0;
+					}
 				}
 				// Check if file already exists
 				if (file_exists($target_file)) {
-    				echo "Sorry, Your File Already Exists On Our Server.";
-    				$uploadOk = 0;
+					echo "Sorry, Your File Already Exists On Our Server.";
+					$uploadOk = 0;
 				}
 				// Check file size
 				if ($_FILES["vidUp"]["size"] > 1000000) {
-    				echo "Sorry, Your File Exceeds The 1GB Size Limit.";
-    				$uploadOk = 0;
+					echo "Sorry, Your File Exceeds The 1GB Size Limit.";
+					$uploadOk = 0;
 				}
 				// Allow certain file formats
 				if($imageFileType != "avi" && $imageFileType != "mp4" && $imageFileType != "mov"
 				&& $imageFileType != "flv" && $imageFileType != "wmv" ) {
-    				echo "Sorry, Only MP4, MOV, WMV, FLV & AVI Files Are Allowed.";
-    				$uploadOk = 0;
+					echo "Sorry, Only MP4, MOV, WMV, FLV & AVI Files Are Allowed.";
+					$uploadOk = 0;
 				}
 				// Check if $uploadOk is set to 0 by an error
 				if ($uploadOk == 0) {
-    				echo "Sorry, We Encountered An Unknown Error. Your File Was Not Uploaded.";
+					echo "Sorry, We Encountered An Unknown Error. Your File Was Not Uploaded.";
 				// if everything is ok, try to upload file
 				} else {
-    				if (move_uploaded_file($_FILES["vidUp"]["tmp_name"], $target_file)) {
-        				echo "Your File ". basename( $_FILES["vidUp"]["name"]). " Has Been Uploaded.";
-    				} else {
-        				echo "Sorry, We Encountered An Unknown Error. Your File Was Not Uploaded.";
-    				}
+					if (move_uploaded_file($_FILES["vidUp"]["tmp_name"], $target_file)) {
+						echo "Your File ". basename( $_FILES["vidUp"]["name"]). " Has Been Uploaded.";
+					} else {
+						echo "Sorry, We Encountered An Unknown Error. Your File Was Not Uploaded.";
+					}
 				}
 				
 				$uploadPath = $target_file;
