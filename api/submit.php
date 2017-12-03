@@ -115,7 +115,7 @@
     				}
 				}
 				
-				$uploadPath = $target_file
+				$uploadPath = $target_file;
 			
 			
 
