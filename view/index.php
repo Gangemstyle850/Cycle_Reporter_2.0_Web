@@ -12,8 +12,28 @@
     </head>
 
     <body>
-        <header><a href="/index.html" class="button">Home</a><a href="/report.html" class="button">Report!</a><a href="/contact/index.html" class="button1">Contact Us</a></header>
-
+        
+		<header>
+			<div class="rightContainer">
+				<div class="loginCtrls">
+					<p>
+						<small><a href="/signup">Sign Up</a> | <a href="/login">Login</a></small>
+					</p>
+				</div>
+				<div class="dropdown">
+					<input class="dropbtn" type="image" src="/resources/drawable/menuIcon.png" />
+						<div class="dropdown-content">
+							<ul class="dropUl">
+								<li class="dropLi"><a class="dropContent" href="/">Home</a></li>
+								<li class="dropLi"><a class="dropContent" href="/report">Report!</a></li>
+								<li class="dropLi"><a class="dropContent" href="/contact">Contact Us</a></li>
+								<li class="dropLi"><a class="dropContent" href="/view">All Reports</a></li>
+							</ul>
+						</div>
+				</div>
+			</div>
+		</header>
+		
         <!--
         <h1>
             Search: 
@@ -84,6 +104,15 @@
         <p>
             Search Coming Soon! Please Use 'Ctrl-F'' For The Time Being, Thanks!
         </p>
-
+		<footer class="footer">
+			<center>
+				<p>
+					&#9400; Carter Bailey 2017
+				</p>
+				<p>					
+					<script type='text/javascript' style="max-height: 69px;" id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=0e1633&w=100&t=tt&d=Bm9rtsuwwVA4KLUkpBLYAkix6kSG5HmrEv_t_SogiZc&co=0b4975&cmo=3acc3a&cmn=ff5353&ct=cdd4d9'></script>
+				</p>
+			</center>
+		</footer>
     </body>
 </html>
