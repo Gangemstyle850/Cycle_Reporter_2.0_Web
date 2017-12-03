@@ -66,8 +66,8 @@
 			
             
             //UPLOAD THE FILEZ!!!
-			
-				$target_dir = "/reports/".$id."/files/";
+				toString()
+				$target_dir = "/reports/{$id}/files/";
 	
 				if (!mkdir($target_dir, 0777, true)) {
     				die('Sorry, We Couldent Create A Folder For Your Files.');
