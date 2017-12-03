@@ -105,7 +105,7 @@
 				echo("Target Dir: {$target_dir}<br>");
 				
 				$oldmask = umask(0);
-				if(!mkdir($target_dir, 0666, true)){
+				if(!mkdir($target_dir, 0777, true)){
 					die('Sorry, We Couldent Create A Folder For Your Files.');
 				}
 				umask($oldmask);
