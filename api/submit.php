@@ -66,7 +66,13 @@
 			
             
             //UPLOAD THE FILEZ!!!
+			
 				$target_dir = "/reports/".$id."/files/";
+	
+				if (!mkdir($target_dir, 0777, true)) {
+    				die('Sorry, We Couldent Create A Folder For Your Files.');
+				}
+			
 				$target_file = $target_dir . basename($_FILES["vidUp"]["name"]);
 				$uploadOk = 1;
 				$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
