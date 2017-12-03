@@ -75,9 +75,9 @@
 		
 			
 			//Generate 7 Digit Id, And Make Shure It Is Unique	
-			while($valid == 0){
+			//while($valid == 0){
 				$id = rand(1111111, 9999999);
-					if($debug){print("Generated ID<br>");}
+			/*		if($debug){print("Generated ID<br>");}
 				
 				$sqlIdCheck = "SELECT * FROM  {$table} WHERE id={$id}";
 				
@@ -96,7 +96,7 @@
 				}
 			}
 			echo("Moving On");
-			
+			*/
 			
             
             //UPLOAD THE FILEZ!!!
