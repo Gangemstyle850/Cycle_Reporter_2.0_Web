@@ -114,6 +114,8 @@
         				echo "Sorry, We Encountered An Unknown Error. Your File Was Not Uploaded.";
     				}
 				}
+				
+				$uploadPath = $target_file
 			
 			
 
@@ -133,7 +135,7 @@
                 $dbPass = "password!";
                 $db = "reportdb";
                 $table = "reports";
-                $sql = "INSERT INTO $table (id, reprt, plateID, plateState, incDate, usrName, perpName, usrMail, perpMail, incLat, incLon) VALUES ('$id', '$reprt', '$plateID', '$plateState', '$incDate', '$usrName', '$perpName', '$usrMail', '$perpMail', '$incLat', '$incLon');";
+                $sql = "INSERT INTO $table (id, reprt, plateID, plateState, incDate, usrName, perpName, usrMail, perpMail, incLat, incLon, uploadPath) VALUES ('$id', '$reprt', '$plateID', '$plateState', '$incDate', '$usrName', '$perpName', '$usrMail', '$perpMail', '$incLat', '$incLon', '$uploadPath');";
 
             //Send To DB (If Aplicable)
                 if($dbSend == true){
