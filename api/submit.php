@@ -77,10 +77,13 @@
 			//Generate 7 Digit Id, And Make Shure It Is Unique	
 			while($valid == 0){
 				$id = rand(1111111, 9999999);
+					if($debug){echo("Generated ID");}
 				
 				$sqlIdCheck = "SELECT * FROM  {$table} WHERE id={$id}";
 				
 				$idCheckResult = mysqli_query($sqlIdCheck);
+					or die("Failed To Send Query, Dont Listen To This Guy \/");
+					if($debug){echo("Sent Query");}
 				
 				while($idRow=mysql_fetch_array($idCheckResult)){
 					$existId = $idRow['id'];
@@ -93,6 +96,7 @@
 					}
 				}
 			}
+			echo("Moving On");
 			
 			
             
