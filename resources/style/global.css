@@ -174,7 +174,11 @@ center{
 .rightContainer {
 	float: right;
 	height: 3%;
-	width: 10%;
+	width: 12%;
+}
+
+.loginCrtls {
+	float:left;
 }
 
 .dropdown {
@@ -182,7 +186,7 @@ center{
     display: inline-block;
 	outline: none;
 	background-color: #191919;
-	width: 35%;
+	width: 25%;
 	height: 100%;
 	float: right;
 }
