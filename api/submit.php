@@ -66,8 +66,7 @@
                 $dbPass = "password!";
                 $db = "reportdb";
                 $table = "reports";
-                $sql = "INSERT INTO $table (id, reprt, plateID, plateState, incDate, usrName, perpName, usrMail, perpMail, incLat, incLon, uploadPath) VALUES ('$id', '$reprt', '$plateID', '$plateState', '$incDate', '$usrName', '$perpName', '$usrMail', '$perpMail', '$incLat', '$incLon', '$uploadPath');";
-			
+                
 			//Connect To Database Server
                         $dbc = mysqli_connect($dbHost, $dbUser, $dbPass)
                             or die("Unable To Connect To Database, Please Wait And Try Again, Or Contact The Site Administrator (Info On Contact Page) If The Problem Persists, And Please Include, ERROR CODE: 1<br>");
@@ -96,9 +95,9 @@
 				}
 			}
 			echo("Moving On");
-			*/
+			*/			
+			$sql = "INSERT INTO $table (id, reprt, plateID, plateState, incDate, usrName, perpName, usrMail, perpMail, incLat, incLon, uploadPath) VALUES ('$id', '$reprt', '$plateID', '$plateState', '$incDate', '$usrName', '$perpName', '$usrMail', '$perpMail', '$incLat', '$incLon', '$uploadPath');";
 			
-            
             //UPLOAD THE FILEZ!!!
 				$target_dir = "/reports/{$id}/files/";
 				
