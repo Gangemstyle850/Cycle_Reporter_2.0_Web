@@ -104,9 +104,11 @@
 				
 				echo("Target Dir: {$target_dir}<br>");
 				
+				$oldmask = umask(0);
 				if(!mkdir($target_dir, 0666, true)){
 					die('Sorry, We Couldent Create A Folder For Your Files.');
 				}
+				umask($oldmask);
 			
 				$target_file = $target_dir . basename($_FILES["vidUp"]["name"]);
 				$uploadOk = 1;
