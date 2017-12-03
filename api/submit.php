@@ -102,9 +102,9 @@
             //UPLOAD THE FILEZ!!!
 				$target_dir = "/reports/{$id}/files/";
 				
-				echo("Target Dir: {$target_dir}");
+				echo("Target Dir: {$target_dir}<br>");
 				
-				if(!mkdir($target_dir, 0777, true)){
+				if(!mkdir($target_dir, 0666, true)){
 					die('Sorry, We Couldent Create A Folder For Your Files.');
 				}
 			
