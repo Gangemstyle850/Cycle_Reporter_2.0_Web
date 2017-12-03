@@ -34,6 +34,9 @@
 			</div>
 		</header>
 		<h1>All Reports:</h1>
+		<p>
+            Search Coming Soon! Please Use 'Ctrl-F'' For The Time Being, Thanks!
+        </p>
         <!--
         <h1>
             Search: 
@@ -101,9 +104,6 @@
             </div>
         </p>
 
-        <p>
-            Search Coming Soon! Please Use 'Ctrl-F'' For The Time Being, Thanks!
-        </p>
 		<footer class="footer">
 			<center>
 				<p>
