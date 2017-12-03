@@ -96,10 +96,10 @@
 			}
 			echo("Moving On");
 			*/			
-			$sql = "INSERT INTO $table (id, reprt, plateID, plateState, incDate, usrName, perpName, usrMail, perpMail, incLat, incLon, uploadPath) VALUES ('$id', '$reprt', '$plateID', '$plateState', '$incDate', '$usrName', '$perpName', '$usrMail', '$perpMail', '$incLat', '$incLon', '$uploadPath');";
+			$sql = "INSERT INTO $table (id, reprt, plateID, plateState, incDate, usrName, perpName, usrMail, perpMail, incLat, incLon) VALUES ('$id', '$reprt', '$plateID', '$plateState', '$incDate', '$usrName', '$perpName', '$usrMail', '$perpMail', '$incLat', '$incLon');";
 			
             //UPLOAD THE FILEZ!!!
-				$target_dir = "/reports/{$id}/files/";
+				/*$target_dir = "/reports/{$id}/files/";
 				
 				echo("Target Dir: {$target_dir}<br>");
 				
@@ -152,7 +152,7 @@
 				}
 				
 				$uploadPath = $target_file;
-			
+				*/
 			
 
             //Print Debug Info
