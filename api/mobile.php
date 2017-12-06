@@ -41,6 +41,8 @@
                 $usrMail = $_POST["usrMail"];
                 $incLat = $_POST["incLat"];
                 $incLon = $_POST["incLon"];
+				$acc = $_POST["acc"];
+				$fault = $_POST["fault"];
 
             //Generate Unique 7 Digit Id
                 $id = rand(1111111, 9999999);
