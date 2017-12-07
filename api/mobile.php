@@ -16,7 +16,7 @@
 				
 			//Debug Log Output Function
 				function consoleWrite( $data ) {
-					echo "<script>console.log('Debug: ".$data."' );</script>";
+					echo "<script>console.log('Debug:');</script>";
 				}
 
             //Debug Error Codes: 
