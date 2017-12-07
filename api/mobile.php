@@ -16,10 +16,7 @@
 				
 			//Debug Log Output Function
 				function consoleWrite( $data ) {
-					$output = $data;
-					if ( is_array( $output ) )
-						$output = implode( ',', $output);
-						echo "<script>console.log( 'Debug: " . $output . "' );</script>";
+					echo "<script>console.log('Debug: ".$data."' );</script>";
 				}
 
             //Debug Error Codes: 
