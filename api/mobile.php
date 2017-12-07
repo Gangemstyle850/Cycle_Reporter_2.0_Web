@@ -77,6 +77,7 @@
                             if ($debug == true){consoleWrite ("Found And Selected Database On Server!!!");}
 
                     //Run Insert Query On Selected Database And Table
+                        if($debug){consoleWrite("Attempting SQL Query...");}
                         if (mysqli_query($dbc, $sql) == true){
                             consoleWrite ("Submition Was Successful!!!Your Report ID Is: "); consoleWrite('"'); consoleWrite("<a href='../../view/indivReport.php?".$id."'>".$id."</a>"); consoleWrite('"'); consoleWrite("!");
 							$json_status = "false";
