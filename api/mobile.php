@@ -2,7 +2,6 @@
 <html>
     <head>        
         <title>Mobile API - Cycle Reporter</title>
-*
         <!--Some Little Added Touches For Mobile, And Those Who Care-->
         <link rel="shortcut icon" href="/favicon.ico">
         <meta name="theme-color" content="#191919" />
