@@ -29,20 +29,20 @@
                 consoleWrite("Yes, I Do Work!!!");
 
             //Form Imports
-                $reprt = $_POST["Reprt"];
-                $plateID = $_POST["plateID"];
-                $plateState = $_POST["plateState"];
-                $incDay = $_POST["incDay"];
-                $incMonth = $_POST["incMonth"];
-                $incYear = $_POST["incYear"];
-                $perpName = $_POST["perpName"];
-                $perpMail = $_POST["perpMail"];
-                $usrName = $_POST["usrName"];
-                $usrMail = $_POST["usrMail"];
-                $incLat = $_POST["incLat"];
-                $incLon = $_POST["incLon"];
-				$acc = $_POST["acc"];
-				$fault = $_POST["fault"];
+                $reprt = $_GET["Reprt"];
+                $plateID = $_GET["plateID"];
+                $plateState = $_GET["plateState"];
+                $incDay = $_GET["incDay"];
+                $incMonth = $_GET["incMonth"];
+                $incYear = $_GET["incYear"];
+                $perpName = $_GET["perpName"];
+                $perpMail = $_GET["perpMail"];
+                $usrName = $_GET["usrName"];
+                $usrMail = $_GET["usrMail"];
+                $incLat = $_GET["incLat"];
+                $incLon = $_GET["incLon"];
+				$acc = $_GET["acc"];
+				$fault = $_GET["fault"];
 
             //Generate Unique 7 Digit Id
                 $id = rand(1111111, 9999999);
@@ -65,7 +65,7 @@
                 $dbPass = "password!";
                 $db = "reportdb";
                 $table = "reports";
-                $sql = "INSERT INTO $table (id, reprt, plateID, plateState, incDate, usrName, perpName, usrMail, perpMail, incLat, incLon) VALUES ('$id', '$reprt', '$plateID', '$plateState', '$incDate', '$usrName', '$perpName', '$usrMail', '$perpMail', '$incLat', '$incLon');";
+                $sql = "INSERT INTO $table (id, reprt, plateID, plateState, incDate, usrName, perpName, usrMail, perpMail, incLat, incLon, accidental, fault) VALUES ('$id', '$reprt', '$plateID', '$plateState', '$incDate', '$usrName', '$perpName', '$usrMail', '$perpMail', '$incLat', '$incLon', '$acc', '$fault');";
 
             //Send To DB (If Aplicable)
                 if($dbSend == true){
