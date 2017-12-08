@@ -80,14 +80,14 @@
                         if($debug){consoleWrite("Attempting SQL Query...");}
                         if (mysqli_query($dbc, $sql) == true){
                             consoleWrite ("Submition Was Successful!!!Your Report ID Is: "); consoleWrite('"'); consoleWrite("<a href='../../view/indivReport.php?".$id."'>".$id."</a>"); consoleWrite('"'); consoleWrite("!");
-							$json_status = "false";
+							$json_status = "true";
 							$json_result = $id;
 						}
                         else{
                             consoleWrite ("Failed To Submit!!! Please Wait And Try Again, Or Contact The Site Administrator (Info On <a href='../../../pages/contact/index.html' target='_blank'>Contact Page</a>) If The Problem Persists, And Please Include, ERROR CODE: 3");
         
                             if ($debug == true){consoleWrite ("SQL Error Message: " . mysqli_error ($dbc) . "");}
-							$json_status = null;
+							$json_status = "false";
 							$json_result = null;
                             }
                         }
