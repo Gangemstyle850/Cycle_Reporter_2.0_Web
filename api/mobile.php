@@ -31,14 +31,11 @@
                 $incDay = $_GET["incDay"];
                 $incMonth = $_GET["incMonth"];
                 $incYear = $_GET["incYear"];
-                $perpName = $_GET["perpName"];
-                $perpMail = $_GET["perpMail"];
                 $usrName = $_GET["usrName"];
                 $usrMail = $_GET["usrMail"];
                 $incLat = $_GET["incLat"];
                 $incLon = $_GET["incLon"];
-				$acc = $_GET["acc"];
-				$fault = $_GET["fault"];
+				$cont = $_GET["cont"];
 
             //Generate Unique 7 Digit Id
                 $id = rand(1111111, 9999999);
@@ -61,7 +58,7 @@
                 $dbPass = "password!";
                 $db = "reportdb";
                 $table = "reports";
-                $sql = "INSERT INTO $table (id, reprt, plateID, plateState, incDate, usrName, perpName, usrMail, perpMail, incLat, incLon, accidental, fault) VALUES ('$id', '$reprt', '$plateID', '$plateState', '$incDate', '$usrName', '$perpName', '$usrMail', '$perpMail', '$incLat', '$incLon', '$acc', '$fault');";
+                $sql = "INSERT INTO $table (id, reprt, plateID, plateState, incDate, usrName, perpName, usrMail, perpMail, incLat, incLon, cont) VALUES ('$id', '$reprt', '$plateID', '$plateState', '$incDate', '$usrName', '$perpName', '$usrMail', '$perpMail', '$incLat', '$incLon', '$cont');";
 
             //Send To DB (If Aplicable)
                 if($dbSend == true){
