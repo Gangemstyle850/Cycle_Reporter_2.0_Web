@@ -92,7 +92,8 @@
                         mysqli_close($dbc);
 						
 					//Write Out Result As JSON
-					print(json_encode ($json_status));</br>
+					print(json_encode ($json_status));
+					print("</br>");
 					print(json_encode ($json_result));
         ?>
     </p>
