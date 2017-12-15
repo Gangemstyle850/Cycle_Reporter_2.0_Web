@@ -80,22 +80,20 @@
                     $result = mysqli_query($con,$sql)or die("SQL Error Message: " . mysql_error() . "<br>");
 
                     echo "<table id='viewAllTBL'>";
-                    echo "<tr><th>ID</th><th>Plate Number</th><th>State</th><th>Date</th><th>Perp</th><th>Perp Mail</th><th>Name</th><th>Mail</th><th>Report</th></tr>";
+                    echo "<tr><th>ID</th><th>Plate Number</th><th>State</th><th>Date</th><th>Name</th><th>Mail</th><th>Report</th></tr>";
 
                     while($row = mysqli_fetch_array($result)) {
                         $id = $row["id"];
                         $reprt = $row["reprt"];
                         $plateID = $row["plateID"];
                         $plateState = $row["plateState"];
-                        $incDate = $row["incDate"];
-                        $perpName = $row["perpName"];
-                        $perpMail = $row["perpMail"];
+                        $incDate = $row["incDate"];             
                         $usrName = $row["usrName"];
                         $usrMail = $row["usrMail"];
                         $incLat = $row["incLat"];
                         $incLon = $row["incLon"];
 
-                        echo "<tr><td><a href=indiv.php?id=".$id.">".$id."</a></td><td>".$plateID."</td><td>".$plateState."</td><td>".$incDate."</td><td>".$perpName."</td><td>".$perpMail."</td><td>".$usrName."</td><td>".$usrMail."</td><td>".$reprt."</td></tr>";
+                        echo "<tr><td><a href=indiv.php?id=".$id.">".$id."</a></td><td>".$plateID."</td><td>".$plateState."</td><td>".$incDate."</td><td>".$usrName."</td><td>".$usrMail."</td><td>".$reprt."</td></tr>";
                     } 
 
                     echo "</table>";
