@@ -58,7 +58,7 @@
                 $dbPass = "password!";
                 $db = "reportdb";
                 $table = "reports";
-                $sql = "INSERT INTO $table (id, reprt, plateID, plateState, incDate, usrName, usrMail, incLat, incLon, uploadPath, cont) VALUES ('$id', '$reprt', '$plateID', '$plateState', '$incDate', '$usrName', '$usrMail', '$incLat', '$incLon', "null", '$cont');";
+                $sql = "INSERT INTO $table (id, reprt, plateID, plateState, incDate, usrName, usrMail, incLat, incLon, uploadPath, cont) VALUES ('$id', '$reprt', '$plateID', '$plateState', '$incDate', '$usrName', '$usrMail', '$incLat', '$incLon', 'null', '$cont');";
 
             //Send To DB (If Aplicable)
                 if($dbSend == true){
